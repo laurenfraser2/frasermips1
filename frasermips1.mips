@@ -1,9 +1,42 @@
 .data
-	myAt: .asciiz "@" 
+	myAt: .asciiz "@"
+	myL: .asciiz "L" 
+	my0: .asciiz "0"
 .text
 	li $v0, 4
 	la $a0, myAt
 	syscall
-	li $v0, 1
-	li $a0, 00046965
-	syscall
+	 main:
+    li $v0, 11
+    
+    la $a0, 70 #start at F 
+    syscall
+    addi $a0, $a0, 44 # add 44 on ascii table to get to lowercase r
+    syscall
+    sub $a0, $a0, 17 #subtract 17 to get to a 
+    syscall
+    addi $a0, $a0, 18 #add 18 to get to s
+    syscall
+    sub $a0, $a0, 14 # subtract 14 to get to e 
+    syscall
+    addi $a0, $a0, 13  # add 13 to get to r
+    syscall
+    sub $a0, $a0, 70 # get to the ,
+    syscall
+    sub $a0, $a0, 12 # get to the space
+    syscall
+    addi $a0, $a0, 44 # get to the L 
+    syscall
+    addi $a0, $a0, 21 # get to the a
+    syscall
+    addi $a0, $a0, 20 # get to the u
+    syscall
+    sub $a0, $a0, 3 # get to the r
+    syscall
+    sub $a0, $a0, 13 # get to the e
+    syscall
+    addi $a0, $a0, 9 # get to the n
+    syscall
+    li $v0, 10
+    syscall
+	
