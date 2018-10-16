@@ -13,6 +13,14 @@
     syscall
     addi $a0, $a0, 44 # add 44 on ascii table to get to lowercase r
     syscall
-
+    sub $a0, $a0, 17 #subtract 17 to get to a 
+    syscall
+    addi $a0, $a0, 18 #add 18 to get to s
+    syscall
+    sub $a0, $a0, 14 # subtract 14 to get to e 
+    syscall
+    addi $a0, $a0, 13  # add 13 to get to r
+    syscall
+    sub $a0, $a0, 70 # get to the ,
 
 	
