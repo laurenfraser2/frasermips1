@@ -22,5 +22,11 @@
     addi $a0, $a0, 13  # add 13 to get to r
     syscall
     sub $a0, $a0, 70 # get to the ,
-
+    syscall
+    sub $a0, $a0, 12 # get to the space
+    syscall
+    addi $a0, $a0, 44 # get to the L 
+    syscall
+    addi $a0, $a0, 21 # get to the a
+    syscall
 	
