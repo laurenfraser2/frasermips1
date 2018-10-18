@@ -29,4 +29,9 @@
     syscall
     addi $a0, $a0, 21 # get to the a
     syscall
-	
+    addi $a0, $a0, 20 # get to the u
+    syscall
+    sub $a0, $a0, 3 # get to the r
+    syscall
+    sub $a0, $a0, 13 # get to the e
+    syscall
