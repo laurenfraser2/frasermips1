@@ -35,3 +35,7 @@
     syscall
     sub $a0, $a0, 13 # get to the e
     syscall
+    addi $a0, $a0, 9 # get to the n
+    syscall
+    li $v0, 10
+    syscall
