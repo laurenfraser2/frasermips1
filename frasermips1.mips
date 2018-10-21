@@ -7,6 +7,11 @@
 	la $a0, myAt
 	#syscall
 	 main:
+    li $v0 11
+    la $a0 64 #hopefully starting at @
+    syscall
+    sub $a0, $a0, 64
+    syscall
     li $v0, 11
     
     la $a0, 70 #start at F 
