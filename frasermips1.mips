@@ -1,24 +1,13 @@
-.data
-	myAt: .asciiz "@"
-	myL: .asciiz "L" 
-	my0: .asciiz "0"
 .text
-	li $v0, 4
-	la $a0, myAt
-	#syscall
-	 main:
-    li $v0 11
-    la $a0 64 #hopefully starting at @
+main:
+    li $v0, 11 #Print chars 
+    la $a0, 64 #Start at the @
     syscall
-   # sub $a0, $a0, 64
-    #syscall
+    sub $v0, $v0, 10 #integer printing 
     sub $a0, $a0, 64
     syscall
-    syscall 
-    
-   # li $v0, 11
-    #addi 
-    
+    	addi $v0, $v0, 10
+    	addi $a0, $a0, 7      # NF
     la $a0, 70 #start at F 
     syscall
     addi $a0, $a0, 44 # add 44 on ascii table to get to lowercase r
