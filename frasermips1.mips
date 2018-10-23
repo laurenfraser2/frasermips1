@@ -6,8 +6,14 @@ main:
     sub $v0, $v0, 10 #integer printing 
     sub $a0, $a0, 64
     syscall
-    	addi $v0, $v0, 10
-    	addi $a0, $a0, 7      # NF
+    addi $a0, $a0, 0
+    syscall
+    addi $a0, $a0, 0
+    syscall
+    addi $v0, $v0, 10
+    addi $a0, $a0, 7      # NF
+    syscall
+    
     la $a0, 70 #start at F 
     syscall
     addi $a0, $a0, 44 # add 44 on ascii table to get to lowercase r
